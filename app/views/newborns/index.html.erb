@@ -1,0 +1,29 @@
+<h1>Listing newborns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date of birth</th>
+      <th>Name</th>
+      <th>Number of weeks</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @newborns.each do |newborn| %>
+      <tr>
+        <td><%= newborn.date_of_birth %></td>
+        <td><%= newborn.name %></td>
+        <td><%= newborn.number_of_weeks %></td>
+        <td><%= link_to 'Show', newborn %></td>
+        <td><%= link_to 'Edit', edit_newborn_path(newborn) %></td>
+        <td><%= link_to 'Destroy', newborn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Newborn', new_newborn_path %>

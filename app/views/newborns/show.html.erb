@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Date of birth:</strong>
+  <%= @newborn.date_of_birth %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @newborn.name %>
+</p>
+
+<p>
+  <strong>Number of weeks:</strong>
+  <%= @newborn.number_of_weeks %>
+</p>
+
+<%= link_to 'Edit', edit_newborn_path(@newborn) %> |
+<%= link_to 'Back', newborns_path %>
